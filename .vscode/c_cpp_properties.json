@@ -1,0 +1,30 @@
+{
+    "configurations": [
+        {
+            "name": "CharisOS x86_64",
+            "includePath": [
+                "${workspaceFolder}/include",
+                "${workspaceFolder}/include/kernel",
+                "${workspaceFolder}/kernel",
+                "${workspaceFolder}/boot"
+            ],
+            "defines": [
+                "__x86_64__",
+                "__KERNEL__",
+                "__FREESTANDING__"
+            ],
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "linux-gcc-x64",
+            "browse": {
+                "path": [
+                    "${workspaceFolder}/include",
+                    "${workspaceFolder}/kernel",
+                    "${workspaceFolder}/boot"
+                ],
+                "limitSymbolsToIncludedHeaders": false
+            }
+        }
+    ],
+    "version": 4
+}
