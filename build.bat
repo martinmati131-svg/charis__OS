@@ -29,6 +29,7 @@ gcc -ffreestanding -m64 -fno-pie -fno-pic -mcmodel=kernel -mno-red-zone -mno-mmx
 gcc -ffreestanding -m64 -fno-pie -fno-pic -mcmodel=kernel -mno-red-zone -mno-mmx -mno-sse -mno-sse2 -O2 -Wall -Wextra -Iinclude -c kernel\printf.c -o build\printf.o
 gcc -ffreestanding -m64 -fno-pie -fno-pic -mcmodel=kernel -mno-red-zone -mno-mmx -mno-sse -mno-sse2 -O2 -Wall -Wextra -Iinclude -c kernel\net.c -o build\net.o
 gcc -ffreestanding -m64 -fno-pie -fno-pic -mcmodel=kernel -mno-red-zone -mno-mmx -mno-sse -mno-sse2 -O2 -Wall -Wextra -Iinclude -c kernel\il_runtime.c -o build\il_runtime.o
+gcc -ffreestanding -m64 -fno-pie -fno-pic -mcmodel=kernel -mno-red-zone -mno-mmx -mno-sse -mno-sse2 -O2 -Wall -Wextra -Iinclude -c kernel\shell.c -o build\shell.o
 
 ld -T link.ld -nostdlib -z max-page-size=0x1000 -z noexecstack -o build\kernel.elf build\boot.o build\long_mode.o build\main.o build\vga.o build\serial.o build\string.o build\printf.o build\memory.o build\idt.o build\irq.o build\timer.o build\keyboard.o build\syscall.o build\task.o build\scheduler.o build\shell.o build\il_runtime.o build\net.o build\interrupt_stubs.o build\context.o build\gdt.o build\io.o
 
