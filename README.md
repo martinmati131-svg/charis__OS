@@ -113,3 +113,35 @@ A built-in command interpreter providing:
 ├── iso/                  # ISO image structure
 └── build/                # Build artifacts (generated)
 ```
+# Charis OS — Aura-Pi Industrial Edition 🚀
+**A specialized fork for Precision Agriculture, Bio-Extraction, and ROS 2 Robotics.**
+
+> [!IMPORTANT]
+> This repository is a customized fork of Charis OS, engineered by **Powerdreams Intelligence** for the **Aura-Pi Industrial Node**. It features a hardened kernel and pre-configured drivers specifically for autonomous botanical extraction in Juja, Kenya.
+
+---
+
+## 🛠 Project Aura Customizations
+This fork introduces specific enhancements to bridge the gap between low-level hardware and high-level Ag-Tech analytics:
+- **I2C Driver Stack:** Native support for the **ADS1115** 16-bit ADC for high-precision soil and substrate pH monitoring.
+- **Actuator Control:** Pre-configured PWM logic for **NEMA 17** stepper motors, used in industrial stirring and solvent recovery.
+- **Environmental Logic:** Integrated firmware support for DHT22/AM2302 sensors to monitor biomass curing conditions.
+- **Aura-Sync:** A background service that bridges ROS 2 telemetry to the [Powerdreams Live Dashboard](https://powerdreams.top).
+
+## 🧠 Core Architecture
+- **Base OS:** Ubuntu 24.04 LTS (Minimal Headless Build)
+- **Middleware:** ROS 2 Jazzy Jalisco
+- **Communication:** MQTT (Secure Bridge) / WebSockets
+- **Power Management:** Optimized for solar-buffered Raspberry Pi 5 clusters.
+
+## 🚀 Deployment (Aura-Pi Node)
+To initialize an industrial extraction node using this OS:
+
+```bash
+# Clone the Aura-Pi fork
+git clone [https://github.com/martinmati131-svg/charis__OS.git](https://github.com/martinmati131-svg/charis__OS.git)
+
+# Run the Aura Environment Setup
+cd charis__OS
+chmod +x setup_aura_node.sh
+./setup_aura_node.sh
