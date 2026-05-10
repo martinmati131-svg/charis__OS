@@ -16,4 +16,5 @@ def generate_launch_description():
         
         # Vision Node (VLA)
         Node(package='aura_vision', executable='camera_node')
+
     ])
