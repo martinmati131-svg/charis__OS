@@ -6,6 +6,14 @@ from launch.actions import LogInfo, TimerAction
 def generate_launch_description():
     return LaunchDescription([
         LogInfo(msg="Aura Intelligence: Initializing Charis OS Industrial Stack..."),
+# Add this inside your LaunchDescription array
+Node(
+    package='aura_security',
+    executable='aura_sentinel',
+    name='sentinel_watchdog',
+    output='screen'
+)
+
 
         # 1. Hardware Interface Layer (NEMA 17 Steppers)
         Node(
